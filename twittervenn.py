@@ -1,6 +1,4 @@
 import random
-import copy
-
 import numpy
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
@@ -8,18 +6,17 @@ from textblob import TextBlob
 from statistweepy import models
 
 sqrt = numpy.sqrt
-helv_24 = fm.FontProperties(fname='/home/asus/Arief_tempo/new_font/HelveticaNeueBold.ttf', size = 24)
-helv_15 = fm.FontProperties(fname='/home/asus/Arief_tempo/new_font/HelveticaNeueBold.ttf', size = 15)
-helv_11 = fm.FontProperties(fname='/home/asus/Arief_tempo/new_font/HelveticaNeueBold.ttf', size = 11)
-helv_9 = fm.FontProperties(fname='/home/asus/Arief_tempo/new_font/HelveticaNeueBold.ttf', size = 9)
+helv_24 = fm.FontProperties(fname='HelveticaNeueBold.ttf', size = 24)
+helv_15 = fm.FontProperties(fname='HelveticaNeueBold.ttf', size = 15)
+helv_11 = fm.FontProperties(fname='HelveticaNeueBold.ttf', size = 11)
+helv_9 = fm.FontProperties(fname='HelveticaNeueBold.ttf', size = 9)
 leftcolor = [1, 0, 0, 1]
 middlecolor = [0, 1, 0, 1]
 rightcolor = [0, 0, 1, 1]
-highlight1 = ('jokowi', )
-highlight2 = ('prabowo', )
+highlight1 = ('jakarta', )
+highlight2 = ('administration', )
 
-#dataset = models.Tweets(numpy.load('/home/asus/Arief_tempo/twitterstats/TMCPoldaMetro_1500samples_hour_min_0_16_date_11_7_2018.npy'))
-dataset = models.Tweets(numpy.load('/home/asus/Arief_tempo/twitterstats/jakpost_3214samples_hour_min_20_18_date_22_6_2018.npy'))
+dataset = models.Tweets(numpy.load('jakpost_3214samples_hour_min_20_18_date_22_6_2018.npy'))
 tweets_dic = {}
 tweets_dic['tweet'] = dataset
 tweets_dic['text'] = [i.full_text for i in dataset]
@@ -102,7 +99,6 @@ center2 = (shift2, 0)
 x2 = [(-radius2+shift2)+i*0.001 for i in range(2*1000*radius2 + 1)]
 y2_upper = [sqrt(radius2**2 - (i-shift2)**2) for i in x2]
 y2_lower = [-y for y in y2_upper]
-
 
 fig,ax = plt.subplots()
 ax.plot(x1, y1_upper, color = 'k')
