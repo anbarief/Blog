@@ -23,7 +23,7 @@ for i in range(5):
 
         elif (guess in list(puzzleWord)):
 
-            for\ k in range(len(puzzleWord)):
+            for k in range(len(puzzleWord)):
                 if guess == puzzleWord[k]:
                     puzzleBlanks = puzzleBlanks[0:k] + guess + puzzleBlanks[k+1:]
 
