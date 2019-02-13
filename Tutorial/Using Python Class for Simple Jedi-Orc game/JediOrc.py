@@ -1,9 +1,9 @@
 import turtle
 
-jedi_gif = "/home/asus/Arief_tempo/images/random/jedi.gif"
-orc_gif = "/home/asus/Arief_tempo/images/random/orc.gif"
-darkorc_gif = "/home/asus/Arief_tempo/images/random/darkorc.gif"
-damaged_gif = "/home/asus/Arief_tempo/images/random/damaged.gif"
+jedi_gif = "jedi.gif"
+orc_gif = "orc.gif"
+darkorc_gif = "darkorc.gif"
+damaged_gif = "damaged.gif"
 
 turtle.register_shape( jedi_gif )
 turtle.register_shape( orc_gif )
