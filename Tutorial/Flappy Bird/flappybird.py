@@ -47,7 +47,7 @@ class Bird(Image):
     def on_touch_down(self, touch):
         super().on_touch_down(touch)
         if not (self.parent.gameover):
-            self.height_frac += 0.15
+            self.height_frac += 0.25
             self.source = flappy_up
             self.fall = 0
         
@@ -108,7 +108,7 @@ class Game(FloatLayout):
         self.add_random_wall()
 
     def add_random_wall(self):
-        height = random.uniform(100, 0.6*Window.size[1])
+        height = random.uniform(100, 0.4*Window.size[1])
         pos_y = random.uniform(0, Window.size[1]*0.6)
 
         color = [random.uniform(0.3, 1) for i in range(4)]
